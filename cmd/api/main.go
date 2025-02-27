@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/http"
 	"ton-balance-api/handlers"
 	"ton-balance-api/middleware"
 
@@ -9,6 +10,10 @@ import (
 
 func main() {
 	r := gin.Default()
+
+	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "OK")
+	})
 
 	authGroup := r.Group("/api")
 	authGroup.Use(middleware.AuthMiddleware())
