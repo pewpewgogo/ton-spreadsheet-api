@@ -25,11 +25,13 @@ type BalanceResponse struct {
 var (
 	addressContractNOT  = "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT"
 	addressContractDOGS = "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS"
+	addressContractUSDT = "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs"
 )
 
 var TicketConvert = map[string]*string{
 	"NOT":  &addressContractNOT,
 	"DOGS": &addressContractDOGS,
+	"USDT": &addressContractUSDT,
 	"TON":  nil,
 }
 
