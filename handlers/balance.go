@@ -44,7 +44,7 @@ func GetBalance(c *gin.Context) {
 	}
 
 	var tokenContract = TicketConvert[req.Ticker]
-	var userAddress, _ = address.ParseAddr(req.Address)
+	var userAddress = address.MustParseAddr(req.Address)
 
 	var balance *big.Int
 	var err error
